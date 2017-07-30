@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Cases.css">
+    <link rel="stylesheet" href="css/Person.css">
+    <style>
+        .filter-box {
+            height: 50px;
+            margin-top: 20px;
+        }
+        .filter {
+            background: #424242;
+            color: #b2b2b2;
+            padding: 10px 20px;
+            overflow: hidden;
+        }
+        .col-xs-8 {
+            width: 66.66666667%;
+        }
+        .col-xs-4 {
+            width: 33.33333333%;
+        }
+        .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+            float: left;
+        }
+        .elite-list .search .btn {
+            width: 80px;
+            height: 30px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: 0;
+        }
+        .elite-list .filter select {
+            border: 0;
+            padding: 4px 2px;
+            max-width: 200px;
+            min-width: 90px;
+            height: 30px;
+        }
+        .elite-list .filter .shop {
+            margin: 0 10px;
+        }
+        .elite-list .list .item {
+            width: 280px;
+            height: 370px;
+            line-height: 22px;
+            border: solid 1px #f8f8f8;
+            box-shadow: 0 1px 1px #f5f5f5;
+            margin: 0 auto 10px;
+            position: relative;
+        }
+        .col-xs-3 {
+            width: 25%;
+        }
+        .elite-list .search {
+            width: 310px;
+            height: 30px;
+            position: relative;
+            background: #fff;
+        }
+        .elite-list .search .txt {
+            width: 220px;
+            height: 30px;
+            line-height: 30px\9;
+            border: 0;
+            padding: 0 5px;
+        }
+
+    </style>
+</head>
+<body>
+<iframe src="head.html" width="100%" frameborder="0" height="110px" scrolling="no"></iframe>
+<!--内容/s-->
+<div class="bg-gray">
+    <div class="container">
+        <!--面包屑/s-->
+        <div class="here"><span>当前位置：</span> <a href="/">首页</a> > <a href="/designer">设计团队</a> >
+            明星设计师 </div>
+        <!--面包屑/e-->
+        <div class="content elite-list">
+            <div class="alllist">
+                <div class="alllist-sort">
+                    <ul class="alllist-sort-ul">
+                        <li class="clearfix">
+                            <div class="alllist-sort-ul-title pull-left">擅长户型</div>
+                            <ul class="alllist-sort-ul-angle pull-left">
+                                <li><a class="active" href="/designer">全部</a></li>
+                                <li><a href="/designer/ht1">别墅</a></li>
+                                <li><a href="/designer/ht2">公寓</a></li>
+                                <li><a href="/designer/ht3">跃层</a></li>
+                                <li><a href="/designer/ht4">普通住宅</a></li>
+                                <li><a href="/designer/ht5">会所</a></li>
+                                <li><a href="/designer/ht9">一居室</a></li>
+                                <li><a href="/designer/ht6">二居室</a></li>
+                                <li><a href="/designer/ht10">三居室</a></li>
+                                <li><a href="/designer/ht11">四居室</a></li>
+                                <li><a href="/designer/ht12">Loft</a></li>
+                                <li><a href="/designer/ht8">复式</a></li>
+                                <li><a href="/designer/ht7">小户型</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="clearfix">
+                            <div class="alllist-sort-ul-title pull-left">擅长风格</div>
+                            <ul class="alllist-sort-ul-angle pull-left">
+                                <li><a class="active" href="/designer">全部</a></li>
+                                <li><a href="/designer/s1">欧式古典</a></li>
+                                <li><a href="/designer/s2">现代简约</a></li>
+                                <li><a href="/designer/s3">新古典</a></li>
+                                <li><a href="/designer/s4">雅致主义</a></li>
+                                <li><a href="/designer/s5">美式乡村</a></li>
+                                <li><a href="/designer/s6">现代前卫</a></li>
+                                <li><a href="/designer/s7">新中式</a></li>
+                                <li><a href="/designer/s8">地中海式</a></li>
+                                <li><a href="/designer/s33">简欧</a></li>
+                                <li><a href="/designer/s9">其他</a></li>
+
+                            </ul>
+                        </li>
+
+
+                        <li class="clearfix current">
+                            <div class="alllist-sort-ul-title pull-left">所属店面</div>
+                            <ul class="alllist-sort-ul-angle pull-left">
+                                <li><a class="active" href="/designer">全部</a></li>
+                                <li><a href="/designer/co1374">总部设计一部</a></li>
+
+                                <li><a href="/designer/co1605">总部设计二部</a></li>
+
+                                <li><a href="/designer/co1990">花园路设计一部</a></li>
+
+                                <li><a href="/designer/co1854">居然之家设计中心</a></li>
+
+                                <li><a href="/designer/co2643">长江路设计中心</a></li>
+
+                                <li><a href="/designer/co100023">花园路设计二部</a></li>
+
+                            </ul>
+                            <div class="ico"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-box">
+                <div class="filter">
+                    <div class="row">
+                        <div class="col-xs-8"> <span>当前筛选：</span>
+                            <select onchange="window.location=this.value">
+                                <option value="/designer"  selected >全部户型</option>
+                                <option value="/designer/ht1" >别墅</option>
+                                <option value="/designer/ht2" >公寓</option>
+                                <option value="/designer/ht3" >跃层</option>
+                                <option value="/designer/ht4" >普通住宅</option>
+                                <option value="/designer/ht5" >会所</option>
+                                <option value="/designer/ht9" >一居室</option>
+                                <option value="/designer/ht6" >二居室</option>
+                                <option value="/designer/ht10" >三居室</option>
+                                <option value="/designer/ht11" >四居室</option>
+                                <option value="/designer/ht12" >Loft</option>
+                                <option value="/designer/ht8" >复式</option>
+                                <option value="/designer/ht7" >小户型</option>
+                            </select>
+                            <span>+</span>
+                            <select onchange="window.location=this.value">
+                                <option value="/designer"  selected >全部风格</option>
+                                <option value="/designer/s1" >欧式古典</option>
+                                <option value="/designer/s2" >现代简约</option>
+                                <option value="/designer/s3" >新古典</option>
+                                <option value="/designer/s4" >雅致主义</option>
+                                <option value="/designer/s5" >美式乡村</option>
+                                <option value="/designer/s6" >现代前卫</option>
+                                <option value="/designer/s7" >新中式</option>
+                                <option value="/designer/s8" >地中海式</option>
+                                <option value="/designer/s33" >简欧</option>
+                                <option value="/designer/s9" >其他</option>
+
+                            </select>
+                            <span>+</span>
+
+                            <select class="shop" onchange="window.location=this.value">
+
+                                <option value="/designer"  selected >全部店面</option>
+                                <option value="/designer/co1374" >总部设计一部</option>
+                                <option value="/designer/co1605" >总部设计二部</option>
+                                <option value="/designer/co1990" >花园路设计一部</option>
+                                <option value="/designer/co1854" >居然之家设计中心</option>
+                                <option value="/designer/co2643" >长江路设计中心</option>
+                                <option value="/designer/co100023" >花园路设计二部</option>
+
+
+                            </select>
+
+                            <span>共找到<span class="text-red">46</span>个设计师</span> </div>
+                        <div class="col-xs-4">
+                            <div class="search pull-right">
+                                <form action="/search" method="get" target ="_blank">
+                                    <input type="hidden" name="action" value="designer"/>
+                                    <input class="txt" type="text" name="word" placeholder="关键词">
+                                    <input class="btn btn-red" type="submit" value="找设计师">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list bg-white">
+                <div class="row">
+
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="ico-tag ico-tag-2"></div>
+                            <div class="box1">
+                                <a href="/Apple/Person.html"  target="_blank" ><img height="280" width="280" alt="总部设计二部-宋辉" title="总部设计二部-宋辉" src="images/Des_team/Designers/5035704e30890f96.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="Person.html" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">宋辉</span>
+                                <span class="job">高级主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">7</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">21</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计二部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="ico-tag ico-tag-1"></div>
+                            <div class="box1">
+                                <a href="/designer/1507"  target="_blank" ><img height="280" width="280" alt="总部设计一部-李辽" title="总部设计一部-李辽"  src="images/Des_team/Designers/13158009aa728a7f.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">李辽</span>
+                                <span class="job">主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">21</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">16</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="ico-tag ico-tag-1"></div>
+                            <div class="box1">
+                                <a href="/designer/2183"  target="_blank" ><img height="280" width="280" alt="总部设计二部-孙燕" title="总部设计二部-孙燕" src="images/Des_team/Designers/441575685b45d60b.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">孙燕</span>
+                                <span class="job">主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">20</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">16</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计二部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="ico-tag ico-tag-1"></div>
+                            <div class="box1">
+                                <a href="/designer/2179"  target="_blank" ><img height="280" width="280" alt="总部设计二部-邵天鹏" title="总部设计二部-邵天鹏"  src="images/Des_team/Designers/355572330fa02533.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">邵天鹏</span>
+                                <span class="job">副主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">23</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">11</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计二部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/2510"  target="_blank" ><img height="280" width="280" alt="总部设计二部-雷文龙" title="总部设计二部-雷文龙" src="images/Des_team/Designers/2745704e2bedd276.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">雷文龙</span>
+                                <span class="job">主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">20</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">18</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计二部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/1661"  target="_blank" ><img height="280" width="280" alt="总部设计二部-王贞" title="总部设计二部-王贞" src="images/Des_team/Designers/54257230fc0c8218.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">王贞</span>
+                                <span class="job">主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">26</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">14</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计二部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/2381"  target="_blank" ><img height="280" width="280" alt="总部设计一部-张怡" title="总部设计一部-张怡"  src="images/Des_team/Designers/68358006fd0625e5.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">张怡</span>
+                                <span class="job">副主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">18</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">14</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/2288"  target="_blank" ><img height="280" width="280" alt="居然之家设计中心-孙文强" title="居然之家设计中心-孙文强" src="images/Des_team/Designers/5275721ea94a12db.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">孙文强</span>
+                                <span class="job">副主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">15</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">9</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-居然之家设计中心</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100449"  target="_blank" ><img height="280" width="280" alt="总部设计一部-马宏朝" title="总部设计一部-马宏朝"  src="images/Des_team/Designers/295837b7730034b.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">马宏朝</span>
+                                <span class="job">副主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">13</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">14</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/2647"  target="_blank" ><img height="280" width="280" alt="总部设计一部-杜晓培" title="总部设计一部-杜晓培" src="images/Des_team/Designers/7565800a569ec9ac.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">杜晓培</span>
+                                <span class="job">副主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">30</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">12</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100724"  target="_blank" ><img height="280" width="280" alt="总部设计一部-韩丹" title="总部设计一部-韩丹" src="images/Des_team/Designers/34858fd8c5bbfe20.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">韩丹</span>
+                                <span class="job">副主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">10</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">11</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/2509"  target="_blank" ><img height="280" width="280" alt="花园路设计一部-窦卫华" title="花园路设计一部-窦卫华" src="images/Des_team/Designers/3145704e2cddd702.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">窦卫华</span>
+                                <span class="job">副主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">18</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">11</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-花园路设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/3006"  target="_blank" ><img height="280" width="280" alt="居然之家设计中心-刘永强" title="居然之家设计中心-刘永强" src="images/Des_team/Designers/18057fc8641ae656.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">刘永强</span>
+                                <span class="job">副主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">15</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">11</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-居然之家设计中心</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100043"  target="_blank" ><img height="280" width="280" alt="总部设计二部-刘静" title="总部设计二部-刘静" src="images/Des_team/Designers/15958425c9a79e93.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">刘静</span>
+                                <span class="job">副主任设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">12</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">11</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计二部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100558"  target="_blank" ><img height="280" width="280" alt="总部设计一部-黄腾" title="总部设计一部-黄腾"  src="images/Des_team/Designers/72158d0ae6724939.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">黄腾</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">16</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">9</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/2224"  target="_blank" ><img height="280" width="280" alt="总部设计二部-邵许" title="总部设计二部-邵许"  src="images/Des_team/Designers/486572330cd3dd6e.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">邵许</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">18</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">9</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计二部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/2796"  target="_blank" ><img height="280" width="280" alt="长江路设计中心-乔亚伟" title="长江路设计中心-乔亚伟" src="images/Des_team/Designers/78058ec2eee98644.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">乔亚伟</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">14</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">11</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-长江路设计中心</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100340"  target="_blank" ><img height="280" width="280" alt="花园路设计一部-郭思慧" title="花园路设计一部-郭思慧" src="images/Des_team/Designers/7925844c0dcdda12.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">郭思慧</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">14</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">7</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-花园路设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100341"  target="_blank" ><img height="280" width="280" alt="花园路设计一部-程蕊" title="花园路设计一部-程蕊" src="images/Des_team/Designers/96458215de085cd2.png"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">程蕊</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">15</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">9</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-花园路设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100722"  target="_blank" ><img height="280" width="280" alt="总部设计一部-张优胜" title="总部设计一部-张优胜" src="images/Des_team/Designers/56358fd7f0e82c0b.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">张优胜</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">2</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">10</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100721"  target="_blank" ><img height="280" width="280" alt="总部设计一部-杜颖" title="总部设计一部-杜颖"  src="images/Des_team/Designers/61158fd7ddce5d05.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">杜颖</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">12</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">11</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/3005"  target="_blank" ><img height="280" width="280" alt="花园路设计一部-张松" title="花园路设计一部-张松"  src="images/Des_team/Designers/53458049517dc978.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">张松</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">15</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">11</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-花园路设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100155"  target="_blank" ><img height="280" width="280" alt="花园路设计一部-张予" title="花园路设计一部-张予" src="images/Des_team/Designers/9525746b848a2e67.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">张予</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">26</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">10</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-花园路设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100558"  target="_blank" ><img height="280" width="280" alt="总部设计一部-黄腾" title="总部设计一部-黄腾"  src="images/Des_team/Designers/72158d0ae6724939.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">黄腾</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">16</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">9</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/2224"  target="_blank" ><img height="280" width="280" alt="总部设计二部-邵许" title="总部设计二部-邵许"  src="images/Des_team/Designers/486572330cd3dd6e.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">邵许</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">18</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">9</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计二部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/2796"  target="_blank" ><img height="280" width="280" alt="长江路设计中心-乔亚伟" title="长江路设计中心-乔亚伟" src="images/Des_team/Designers/78058ec2eee98644.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">乔亚伟</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">14</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">11</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-长江路设计中心</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100340"  target="_blank" ><img height="280" width="280" alt="花园路设计一部-郭思慧" title="花园路设计一部-郭思慧" src="images/Des_team/Designers/7925844c0dcdda12.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">郭思慧</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">14</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">7</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-花园路设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100341"  target="_blank" ><img height="280" width="280" alt="花园路设计一部-程蕊" title="花园路设计一部-程蕊" src="images/Des_team/Designers/96458215de085cd2.png"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">程蕊</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">15</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">9</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-花园路设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100722"  target="_blank" ><img height="280" width="280" alt="总部设计一部-张优胜" title="总部设计一部-张优胜" src="images/Des_team/Designers/56358fd7f0e82c0b.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">张优胜</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">2</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">10</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100721"  target="_blank" ><img height="280" width="280" alt="总部设计一部-杜颖" title="总部设计一部-杜颖"  src="images/Des_team/Designers/61158fd7ddce5d05.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">杜颖</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">12</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">11</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-总部设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/3005"  target="_blank" ><img height="280" width="280" alt="花园路设计一部-张松" title="花园路设计一部-张松"  src="images/Des_team/Designers/53458049517dc978.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">张松</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">15</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">11</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-花园路设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="item text-center">
+                            <div class="box1">
+                                <a href="/designer/100155"  target="_blank" ><img height="280" width="280" alt="花园路设计一部-张予" title="花园路设计一部-张予" src="images/Des_team/Designers/9525746b848a2e67.jpg"></a>
+                                <p><a href="http://chat.looyuoms.com/chat/chat/p.do?g=10041174&c=20000019&f=10036437" class="zixun" target = "_blank">免费咨询</a><a href="/service/reservation/t2" class="guihua" target = "_blank">免费规划</a></p>
+                            </div>
+                            <div class="box2">
+                                <span class="name">张予</span>
+                                <span class="job">优秀设计师</span>
+                            </div>
+                            <div class="box3 row">
+                                <div class="col-xs-6">案例作品：<span class="text-red">26</span>套</div>
+                                <div class="col-xs-6">从业经验：<span class="text-red">10</span>年</div>
+                                <div class="col-xs-12">所属店面：郑州-花园路设计一部</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="paging">
+                <a href="/designer">首页</a>
+                <a href="/designer">&lt;</a>
+                <a class="active">1</a>
+                <a href="/designer/p2">2</a>
+                <a href="/designer/p2">&gt;</a>
+                <a href="/designer/p2">末页</a>
+            </div>
+        </div>
+    </div>
+    <!--装修预算-->
+    <div class="container banner-ad" id="js-show-ad" style="padding: 0 0 50px 0;">
+        <a href="#" target="_blank"><img src="images/Index/baojia.jpg" height="50" width="1200"></a>
+    </div>
+</div>
+<!--内容/e-->
+<iframe src="footer.html" width="100%" frameborder="0" height="270px" scrolling="no"></iframe>
+<script src="js/jquery-1.7.2_1.js"></script>
+<script src="js/public.js"></script>
+</body>
+</html>
